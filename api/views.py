@@ -4,6 +4,8 @@ from reader import USBReader
 # Create your views here.
 
 def index(request):
-    data = USBReader.__read__()
+    read = USBReader().get_instance()
+
+    data = read.get_data()
     html = "<html><body> Data: %s </body></html>" % data
     return HttpResponse(html)
