@@ -52,3 +52,11 @@ class USBReader:
         if self.connect_arduino():
             while True:
                 self.parse_data(self.ser.readline())
+
+    def send_data_to_base(self):
+        #TODO
+        pass
+
+    def get_last_index(self):
+        #TODO
+        pass
