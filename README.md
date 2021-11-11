@@ -5,7 +5,7 @@
 
 	$ sudo pip install serial 
 	$ sudo pip install django
-	$ sudo pip install django-corsheaders
+	$ sudo pip install django-cors-headers
 
 ###  Initialisation des dépendances : 
 Dans un premier temps, il va falloir initialiser le projet et toutes les dépendances. Pour ce faire il va falloir exécuter la commande: 
