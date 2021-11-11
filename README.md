@@ -1,6 +1,12 @@
 # API-RobotUSB
 ## Utiliser le programme
 
+### Launch.sh 
+La première solution pour lancer le projet est d'utiliser le fichier launch.sh qui installe toutes les librairies et qui le lance :
+
+	$ chmod 777
+	$ ./launch.sh
+
 ### Installation des librairies
 
 	$ sudo pip install serial 
