@@ -5,7 +5,10 @@ const { connect } = require("../USBReader");
 
 router.get("/get", async (req, res, next) => {
     await connect();
-    res.send("Hi!")
+    res.json({
+        "body": "hi",
+        "test": "successful!"
+    })
 });
 
 module.exports = router;

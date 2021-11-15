@@ -19,8 +19,7 @@
   "homepage": "https://github.com/PT3-Robotic-arm/API-RobotUSB#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "sqlite": "^4.0.23",
-    "sqlite3": "^5.0.2"
+    "sqlite": "^4.0.23"
   },
   "devDependencies": {
     "serialport": "^9.2.5"
