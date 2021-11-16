@@ -1,5 +1,6 @@
 const serialport = require('serialport');
 const ReadLine = require("serialport").parsers.Readline;
+const { addRow } = require('./db');
 
 let port;
 
@@ -37,7 +38,8 @@ function parseDataToJson(temp) {
         return
 
     temp = JSON.parse(temp);
-    console.log(temp);
+    addRow(temp);
+    //console.log(temp);
 }
 
 
