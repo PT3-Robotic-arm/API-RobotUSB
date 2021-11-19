@@ -1,13 +1,28 @@
+/* Toutes les données collectés sont stocké dans cette map
+ * id => {
+ *     "x": string,
+ *     "y": string,
+ *     "z": string,
+ *     "acc_x": string,
+ *     "acc_y": string,
+ *     "acc_z": string,
+ *     "direction": string,
+ * }
+ */
 let datas = new Map();
 
+// Ajoute un event à la map, avec un id qui s'incrémente
 function addRow(data) {
     datas.set(datas.size, data);
 }
 
+// Renvoie le dernier event de la map
 function getLatestRow() {
   return getRow(datas.size - 1);
 }
 
+
+// Renvoie un event spécifique
 function getRow(id) {
   if (typeof id == "string")
     id = parseInt(id);
@@ -21,6 +36,7 @@ function getRow(id) {
   return toRet;
 }
 
+// Renvoie la liste des events qu'il y a eu depuis l'id passé en paramètre
 function getSince(from) {
     let toRet = [];
 
