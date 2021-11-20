@@ -56,3 +56,9 @@ Renvoie l'event correspondant à l'id passé dans le path, sous la forme d'un [e
 ## GET /getSince/:id
 Renvoie la liste des events qui se sont produit depuis l'event avec l'id passé dans le path. 
 La réponse est une liste d'[events](#Représentation d'un event).
+
+## Problème de permission arduino 
+
+Entrez dans un terminal la commande suivante : 
+
+<tt>sudo chmod a+rw /dev/ttyACM0</tt>
