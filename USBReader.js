@@ -36,12 +36,12 @@ async function connect() {
 
 // Permet de convertir les données reçues en JSON
 function parseDataToJson(temp) {
-    if (!temp.startsWith("{"))
+    if (!temp.startsWith("["))
         return
 
     temp = JSON.parse(temp);
     addRow(temp);
-    //console.log(temp);
+    console.log(temp);
 }
 
 // Récupère les données envoyé par l'Arduino
