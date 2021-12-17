@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 const { getLatestRow, getSince, getRow} = require("../db");
+const { getLatestData } = require("../USBReader");
 
 router.get("/getLatest", (req, res, next) => {
-    const data = getLatestRow();
+    const data = getLatestData();
 
     res.json(data)
 });

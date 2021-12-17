@@ -2,6 +2,12 @@ const serialport = require('serialport');
 const ReadLine = require("serialport").parsers.Readline;
 const { addRow } = require('./db');
 
+let latest;
+
+function getLatestData() {
+    return latest;
+}
+
 let port;
 
 // Trouve et renvoie l'adresse de l'Arduino
@@ -41,6 +47,7 @@ function parseDataToJson(temp) {
 
     try {
         temp = JSON.parse(temp);
+        latest = temp;
         addRow(temp);
         console.log(temp);
     } catch(e) {
@@ -75,4 +82,5 @@ function listen() {
 
 module.exports = {
     connect: connect,
+    getLatestData: getLatestData
 }
