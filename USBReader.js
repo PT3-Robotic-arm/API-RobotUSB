@@ -39,9 +39,13 @@ function parseDataToJson(temp) {
     if (!temp.startsWith("["))
         return
 
-    temp = JSON.parse(temp);
-    addRow(temp);
-    console.log(temp);
+    try {
+        temp = JSON.parse(temp);
+        addRow(temp);
+        console.log(temp);
+    } catch(e) {
+        console.error("Failed parsing: " + e);
+    }
 }
 
 // Récupère les données envoyé par l'Arduino

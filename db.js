@@ -30,8 +30,8 @@ function getRow(id) {
   if (id >= datas.size || id < 0)
     return {};
 
-  let toRet = datas.get(id) || {};
-  toRet.id = id;
+  let toRet = { id };
+  toRet.values = datas.get(id) || [];
 
   return toRet;
 }
