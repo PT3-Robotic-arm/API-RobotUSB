@@ -65,6 +65,12 @@ function listen() {
             temp += data.toString();
         }
     })
+    port.on("error", async error => {
+        console.log(error);
+        const adress = await findAdress()
+        port = new serialport(adress, 9600);
+        port.pipe(new ReadLine());
+    })
 }
 
 module.exports = {
