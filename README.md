@@ -10,7 +10,7 @@ Par exemple:
 
     $ node --version
 
-Si l'exécution affiche la version installé du programme, c'est qu'il est installé, et vous pouvez passer à l'étape suivante. 
+Si l'exécution affiche la version installée du programme, c'est qu'il est installé, et vous pouvez passer à l'étape suivante. 
 Sinon, il vous faut les installer.
 
 ## Installer le projet
