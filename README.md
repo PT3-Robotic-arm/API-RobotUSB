@@ -1,39 +1,39 @@
-# Démarrer  le projet
-## Prérequis
-Le projet ne supporte actuellement que Linux.  
-Vous aurez besoin de `node`, de `git` et de `npm`.  
-Vous pouvez vous assurer que vous possédez bien chacun de ces programmes en faisant la commande:
+# Start the project
+## Requirements
+This project currently sumport only Linux.  
+You will need `node`, `git` and `npm` to be able to use the project.  
+You can check if you already have those tools installed by running:  
 
     $ <command> --version
 
-Par exemple:
+For example:
 
     $ node --version
 
-Si l'exécution affiche la version installée du programme, c'est qu'il est installé, et vous pouvez passer à l'étape suivante. 
-Sinon, il vous faut les installer.
+If the output displays the version of the program, it means that it is already installed, and you can go to the next step.  
+If not, you will need to install them, by checking their respective website.
 
-## Installer le projet
-Récupérer le code du projet sur github.
+## Install the project
+Retrieve the code from GitHub.
 
     $ git clone https://github.com/PT3-Robotic-arm/API-RobotUSB
 
-Se déplacer dans le dossier correspondant au projet
+Move to the corresponding folder:
 
     $ cd API-RobotUSB
 
-Installer les dépendances
+Install the dependencies:
 
     $ npm install
 
-Exécuter le code
+Run the code:
 
     $ npm start
 
 # Endpoints
 
-## Représentation d'un event
-Les events sont envoyé sous ce format par le serveur, en json:
+## Event representation
+Events are sent following this format, in JSON:
 ```
 {
   "x": string,
@@ -48,17 +48,17 @@ Les events sont envoyé sous ce format par le serveur, en json:
 ```
 
 ## GET /getLatest
-Renvoie le dernier event enregistré par le serveur, sous la forme d'un [event](#Représentation d'un event).
+Send the latest event saved by the server, as an array of `event` (one per sensor).
 
 ## GET /getRow/:id
-Renvoie l'event correspondant à l'id passé dans le path, sous la forme d'un [event](#Représentation d'un event).
+Send the event which correspond to the requested id, as an array of `event` (one per sensor).
 
 ## GET /getSince/:id
-Renvoie la liste des events qui se sont produit depuis l'event avec l'id passé dans le path. 
-La réponse est une liste d'[events](#Représentation d'un event).
+Send the list of the events that appened since the event corresponding to the id in parameter.  
+The answer is sent as a two dimensional array of `event`.
 
-## Problème de permission arduino 
+## Missing permisions issues
 
-Entrez dans un terminal la commande suivante : 
+Run the following command in a terminal, to obtain access to the Arduino's port:
 
-<tt>sudo chmod a+rw /dev/ttyACM0</tt>
+    $ sudo chmod a+rw /dev/ttyACM0
