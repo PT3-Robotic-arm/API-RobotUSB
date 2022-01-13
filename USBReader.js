@@ -16,7 +16,8 @@ async function findAdress() {
     let path = null
     ports.forEach(port => {
         // Sur linux, l'Arduino est monté sur le port /dev/ttyACM0
-        if (port.path.match(/ttyACM0/))
+        // Sur mac, c'est sur le port /dev/tty.usbmodem14201 
+        if (port.path.match(/ttyACM0|tty.usbmodem14201/))
             path = port.path;
     })
     return path;
