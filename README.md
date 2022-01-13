@@ -1,6 +1,6 @@
 # Start the project
 ## Requirements
-This project currently sumport only Linux.  
+This project currently sumport only Linux and MacOs.    
 You will need `node`, `git` and `npm` to be able to use the project.  
 You can check if you already have those tools installed by running:  
 
